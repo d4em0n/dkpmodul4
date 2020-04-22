@@ -60,11 +60,12 @@ def menu(daftar_item):
     while True:
       p = input("Apakah anda ingin memilih ini? Y/N> ")
       if p == 'Y':
-        keranjang.append(daftar_item[i])
+        keranjang.append(daftar_item[pilih])
         print("Item ini telah ditambahkan ke keranjang")
         break
       elif p == 'N':
         break
+        
 def lihat_keranjang():
   i = 1
   total = 0
