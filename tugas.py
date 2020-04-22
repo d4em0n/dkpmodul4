@@ -65,3 +65,26 @@ def menu(daftar_item):
         break
       elif p == 'N':
         break
+def lihat_keranjang():
+  i = 1
+  total = 0
+  for item in keranjang:
+    print("{}. {} = {}".format(i, item.nama.ljust(20, " "), item.harga))
+    total += item.harga
+    i += 1
+  print("Harga total = {}".format(total))
+  
+while True:
+  print("[1] Lihat menu makanan")
+  print("[2] Lihat menu minuman")
+  print("[3] Lihat keranjang")
+  print("[4] Tutup menu")
+  pilih = int(input("Pilih> "))
+  if pilih == 1:
+    menu(daftar_makanan)
+  elif pilih == 2:
+    menu(daftar_minuman)
+  elif pilih == 3:
+    lihat_keranjang()
+  else:
+    break
